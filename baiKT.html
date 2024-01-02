@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+cách khai báo biến
+// có 3 cách khai báo biến:
+// 1: let a = 123;
+// 2: var = 'abc'
+// 3: const = 100
+có mấy kiểu dữ liệu
+// có 3 kiểu d liệu chính:
+// 1: number(số)
+// 2: string(chuỗi)
+// 3: boolean(đúng sai)
+làm sao để quy định kiểu dữ liệu cho 1 biến
+// sử dụng ngoặc kép hoặc đơn hoặc phẩy trên để đánh dấu kiểu chuỗi VD: `a`,"b",'10'
+// sử dụng +prompt để nhập vào dạng số hặc gán trực tiếp số a = 10
+// dạng boolean biến sẽ chỉ thể hiện là true or false VD: dunghaysai = true
+có những cách nào để hiển thị chữ hello ra
+//có 3 cách
+// alert('hello')
+// document.write('hello')
+// console.log('hello')
+có những cách nào để nhập vào biến a
+// let a = abc
+// let a = prompt('hoặc +prompt nếu là số')
+// sử dụng documnet.getelementByid('') từ html
+// tương tự bằng var
+in ra thẻ h1, img, a với JS
+//<h1></h1>
+//<img src="" alt="">
+//
+<table></table>
+//<a href=""></a>
+//
+<script></script>
+Nhập vào tên, in ra tên
+<script>
+    let hoten = prompt('nhập vào tên:')
+    alert(hoten)
+</script>
+Nhập vào a, in ra bình phương của a
+<script>
+    let a = +prompt('nhap vao a:')
+    alert(a ** +'là bình phương của a')
+</script>
+Nhập vào tên, in ra tên với h1
+<h1 id="HT"></h1>
+<script>
+    let hoten = prompt('nhap vào họ và tên:')
+    document.getElementById("HT").innerHTML = 'tên của bạn là:' + hoten
+</script>
+Nhập vào đường dẫn cho biến src, in ra ảnh với nguồn ảnh là biến src
+<img src="../OIP.jpg" height="225" width="352"/>
+Nhập vào tuổi trong biến age, in ra 'Đủ tuổi' nếu age>18
+<script>
+    let age = +prompt('nhap vao so tuoi:');
+    if (age > 18) {
+        document.write('đủ tuổi')
+    } else {
+        document.write('không đủ tuổi')
+    }
+</script>
+Nhập và a, in ra 'Hello' nếu a chẵn, 'Hi' nếu a lẻ
+<script>
+    let a1 = +prompt('nhap vao so: ');
+    if (a1 % 2 == 0) {
+        document.write('hello')
+    } else {
+        document.write('hi')
+    }
+</script>
+Nhập vào a, b. Nếu a>b in ra tổng, nếu a< b in ra tích, nếu a=b in ra 'Hihi'
+<script>
+    let b1 = +prompt("nhập vào số: ");
+    let b2 = +prompt("nhập vào số: ");
+    if (b1 > b2) {
+        document.write('tổng hai số là: ' + (b1 + b2))
+    } else if (b1 < b2) {
+        document.write('tich hai số là: ' + (b1 * b2))
+    } else {
+        document.write('Hihi')
+    }
+</script>
+Nhập a,b,c. In ra số lớn nhất
+<script>
+    let c1 = +prompt("nhập vào số: ");
+    let c2 = +prompt("nhập vào số: ");
+    let c3 = +prompt("nhập vào số: ");
+    let max = c1
+    if (c2 > max) {
+        max = c2
+    }
+    if (c3 > max) {
+        max = c3
+    }
+    document.write(max)
+</script>
+In ra 100 chữ 'Hello'
+<script>
+    for (let i = 1; i <= 100; i++) {
+        document.write('hello')
+    }
+</script>
+Nhập vào N từ prompt. In ra N lần chữ 'Hello'
+<script>
+    let n = +prompt('nhập số ln chào: ');
+    for (let i = 1; i <= n; i++) {
+        document.write('hello')
+    }
+</script>
+In ra cac số từ a đến b, mỗi số trong 1 thẻ h1;
+    <script>
+        let nb1 = +prompt('nhập số ln chào: ');
+        let nb2 = +prompt('nhập số ln chào: ');
+        for (let i = nb1; i <= nb2; i++) {
+            document.write('<h1>' + i + '</h1>')
+        }
+    </script>
+    In ra các phần số chẵn trong h2, le trong h1;
+    <script>
+        let nb1 = +prompt('nhập số ln chào: ');
+        let nb2 = +prompt('nhập số ln chào: ');
+        for (let i = nb1; i <= nb2; i++) {
+            if (i % 2 == 0) {
+                document.write('<h2>' + i + '</h2>')
+            } else {
+                document.write('<h1>' + i + '</h1>')
+            }
+
+        }
+    </script>
+    Đếm có bao nhiêu phần tử chia 5 dư 2 trong mảng
+    <script>
+        let MG = [12, 15, 20, 16, 48];
+        let dem = 0;
+        for (let i = 1; i < MG.length; i++) {
+            if (MG[i] % 5 == 2) {
+                dem++;
+            }
+        }
+        document.write('có' + dem + 'số')
+    </script>
+    Nhap vào a, đếm số lượng a trong mảng.
+    <script>
+        let MG2 = [12, 15, 20, 16, 48];
+        let SCT = +prompt('nhập vào số câần tìm: ')
+        let lan = 0;
+        for (let j = 1; j < MG2.length; j++) {
+            if (MG2[i] == SCT) {
+                lan++;
+            }
+        }
+        document.write('có' + lan + 'số')
+    </script>
+</body>
+</html>
